@@ -126,6 +126,17 @@ h1{margin:0;font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.5rem;l
 .go .dial svg{position:absolute;inset:0;width:100%;height:100%;transition:transform .15s linear}
 .go .dial .nmark{position:absolute;top:2px;left:50%;transform:translateX(-50%);font-size:.65rem;opacity:.7}
 .go .ctext{font-size:.85rem;opacity:.9}
+
+.fs h2{margin-bottom:4px}
+.fs .when{color:var(--muted);font-size:.85rem;margin:0 0 10px}
+.fs h3{font-size:.95rem;margin:12px 0 6px;font-weight:700;display:flex;align-items:center;gap:8px}
+.fs h3 .tag{font-size:.72rem;font-weight:500;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:0 8px}
+.fs ol{margin:0;padding-left:1.3em}
+.fs ol li{margin:0 0 6px;font-size:.92rem}
+.fs p.st{margin:0;font-size:.92rem}
+.fs .yi{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.fs .yi span{font-size:.8rem;background:var(--paper);border-radius:999px;padding:2px 10px}
+.fs .warn{color:var(--lacquer);font-size:.85rem;margin:6px 0 0}
 footer{color:var(--muted);font-size:.8rem;padding:6px 0 30px}
 @media (prefers-reduced-motion:no-preference){.pal{transition:background .2s}}
 </style>
@@ -161,6 +172,7 @@ footer{color:var(--muted);font-size:.8rem;padding:6px 0 30px}
       <label class="toggle"><input type="checkbox" id="dayOnly"> 只看日間（07:00–21:00）</label>
       <ol class="toprank" id="rank"></ol>
     </div>
+    <div class="panel fs" id="fs"></div>
     <div class="go" id="go">
       <h2>前往吉方</h2>
       <p class="tgt" id="goTgt"></p>
@@ -184,7 +196,7 @@ footer{color:var(--muted);font-size:.8rem;padding:6px 0 30px}
     <div class="panel detail" id="detail"></div>
   </aside>
 </main>
-<footer class="wrap">陽盤時家奇門，轉盤、置閏法排盤。最吉方條件：休、生、開、景門，且無門伏吟、門反吟、擊刑、白虎、空亡、門迫、門制、五不遇。內容為傳統術數參考。</footer>
+<footer class="wrap">陽盤時家奇門，轉盤、置閏法排盤。最吉方條件：休、生、開、景門，且無門伏吟、門反吟、擊刑、白虎、空亡、門迫、門制、五不遇。行為風水依門、天盤干、宮位與八神的傳統意象整理。內容為傳統術數參考。</footer>
 
 <script>
 const QM=(()=>{
@@ -368,6 +380,43 @@ $('#rank').onkeydown=e=>{if(e.key==='Enter'){const li=e.target.closest('li[data-
 $('#dayOnly').checked=S.dayOnly;
 $('#dayOnly').onchange=e=>{S.dayOnly=e.target.checked;store.set('qm_dayOnly',S.dayOnly?'1':'0');const hb=S.hb,p=S.p;render();S.hb=hb;S.p=p};
 
+
+// ===== 行為風水 =====
+const FS_DOOR={
+ 休:{act:'在這個方位坐下來，靜心三到五分鐘，放慢呼吸，讓身心安定',yi:['休養調和','拜訪貴人','化解紛爭']},
+ 生:{act:'用手指在空中寫一個「生」字，再打開手機燈光亮一下，象徵生機啟動',yi:['求財','生意成交','投資買賣']},
+ 開:{act:'打開這個方位的窗戶或門，讓空氣流通一會兒',yi:['開市開工','求職面試','展開新計畫']},
+ 景:{act:'打開這個方位的燈，或用手機照亮一下，順便整理儀容',yi:['考試文書','宣傳曝光','提升名聲']},
+ 傷:{act:'只面向此方靜立片刻、整理思緒，不做催旺動作',yi:[]},杜:{act:'只面向此方靜立片刻、整理思緒，不做催旺動作',yi:[]},
+ 死:{act:'只面向此方靜立片刻、整理思緒，不做催旺動作',yi:[]},驚:{act:'只面向此方靜立片刻、整理思緒，不做催旺動作',yi:[]}};
+const FS_STEM={乙:'拿著綠色植物或綠色物品，雙手合十默念心願',丙:'用紅色或暖色的杯子喝一口溫熱的水',丁:'點一盞小燈或一支香（室內請注意安全），默念祈願',
+ 戊:'拿出錢包，把鈔票整理整齊並數一數',己:'把桌面或包包收納整齊，寫下今天要完成的事',庚:'把鑰匙或金屬物品擺正，下定決心去做',
+ 辛:'戴上或擦亮一件飾品，說話保持溫和',壬:'洗洗手或用清水擦臉，讓自己清醒',癸:'慢慢喝幾口清水或茶'};
+const FS_ITEM={坎:'一杯清水',艮:'一個陶瓷杯或一顆小石頭',震:'一小盆綠色植物',巽:'打開窗讓風吹進來，或擺上香氛',離:'一盞點亮的燈',坤:'一件黃色或陶土材質的器物',兌:'一個金屬小物或風鈴',乾:'一枚圓形金屬物，例如硬幣'};
+const FS_GOD={值符:'有貴人相助，適合拜訪長輩、主管或客戶',九天:'利於積極行動、對外發展',九地:'利於穩守、儲蓄、低調行事',太陰:'利於私下規劃、暗中進行',
+ 六合:'利於合作、聯絡、談和',螣蛇:'容易多疑多變，行事前先確認細節',玄武:'留意財物與訊息的真偽',白虎:'注意安全，避免衝突'};
+function renderFS(){
+  const t=curTarget&&curTarget();if(!t){$('#fs').innerHTML='';return}
+  const {c,x}=t,dr=x.door[0],T=x.t[0],good='休生開景'.includes(dr);
+  const ge=x.ge.filter(g=>!['三勝宮','五不擊','天輔時'].includes(g));
+  let yi=[];for(const v of [...FS_DOOR[dr].yi,...ge.map(g=>(QM.GEDESC[g]||'').split(/[，、]/)[0]).filter(Boolean)]){if(yi.some(u=>u.includes(v)||v.includes(u)))continue;yi.push(v)}yi=yi.slice(0,6);
+  const stemAct=FS_STEM[T]||'';
+  $('#fs').innerHTML=`<h2>行為風水</h2><p class="when">${c.hourGZ}時（${hrTxt(S.hb)}）・${x.dir}方・${x.door}・天盤${x.t}</p>
+   ${!good?`<p class="warn">${x.door}不屬於休、生、開、景四吉門，建議改選盤上標示「最吉」的方位。</p>`:(!x.zj?`<p class="warn">此方位有凶格，未列入最吉，效果較弱；可改選盤上標示「最吉」的方位。</p>`:'')}
+   <h3>不出門時 <span class="tag">靜態</span></h3>
+   <p class="st">在家中或辦公室的${x.dir}方擺放${FS_ITEM[x.gua]}，靜坐約十五分鐘，心中想著希望達成的事。${x.gua==='坎'?'之後把水慢慢喝下。':''}</p>
+   <h3>要出門時 <span class="tag">動態</span></h3>
+   <ol>
+    <li>走到或面向${x.dir}方（${x.gua}宮），深呼吸三次，想著今天要辦的事。</li>
+    <li>${FS_DOOR[dr].act}。</li>
+    ${stemAct?`<li>${stemAct}。</li>`:''}
+    <li>完成後往${x.dir}方行進約 15～20 分鐘，再前往真正的目的地。可用下方「前往吉方」規劃路線。</li>
+   </ol>
+   <h3>此時此方</h3>
+   <p class="st">${FS_GOD[x.god]||''}。</p>
+   ${yi.length?`<div class="yi">${yi.map(v=>`<span>宜${v}</span>`).join('')}</div>`:''}`;
+}
+
 // ===== 定位與導航 =====
 const BEAR={北:0,東北:45,東:90,東南:135,南:180,西南:225,西:270,西北:315};
 const G={pos:null,dist:+(store.get('qm_dist')||1000),heading:null};
@@ -378,6 +427,7 @@ function destPoint(lat,lng,brg,m){const R=6371000,d=m/R,t=brg*Math.PI/180,p1=lat
 const fmt6=n=>n.toFixed(6);
 function curTarget(){if(!S.charts.length||!S.charts[S.hb])return null;const c=S.charts[S.hb];return {c,x:c.pals.find(q=>q.p===S.p)}}
 function renderGo(){
+  renderFS();
   const t=curTarget();if(!t){$('#go').style.display='none';return}$('#go').style.display='';
   const {c,x}=t;
   $('#goTgt').textContent=`${c.hourGZ}時 往${x.dir}方（${x.door}）`;
