@@ -90,14 +90,25 @@ h1{margin:0;font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.5rem;l
 /* side */
 .side h2{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.15rem;margin:0 0 8px;letter-spacing:.04em}
 .panel{background:var(--sheet);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:18px}
-.toprank{list-style:none;margin:0;padding:0}
-.toprank li{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer}
-.toprank li:last-child{border-bottom:0}
-.toprank .rk{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--paper);font-weight:700;font-size:.85rem}
-.toprank li:first-child .rk{background:var(--brass);color:#fff}
-.toprank .w{font-weight:700}
-.toprank .w span{font-weight:400;color:var(--muted);font-size:.85rem}
-.toprank .sc{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.15rem;color:var(--lacquer)}
+.toprank{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+.toprank li{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;padding:7px 10px;border-radius:10px;cursor:pointer;border:1px solid transparent}
+.toprank li:hover{border-color:var(--line)}
+.toprank .hz{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.2rem;line-height:1.1;text-align:center}
+.toprank .hz small{display:block;font-family:"Noto Sans TC",sans-serif;font-weight:400;font-size:.68rem;color:var(--muted)}
+.toprank .w{font-weight:700;font-size:.95rem;line-height:1.35}
+.toprank .w span{display:block;font-weight:400;color:var(--muted);font-size:.78rem}
+.toprank .sc{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.05rem;color:var(--lacquer);text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.toprank .medal{font-family:"Noto Sans TC",sans-serif;font-size:.68rem;font-weight:700;padding:0 7px;border-radius:999px;color:#fff;line-height:1.6}
+.toprank li.r1{background:#E9C46A33;border-color:var(--brass)} .toprank li.r1 .medal{background:var(--brass)}
+.toprank li.r2{background:#2F6B5A1F;border-color:var(--jade)} .toprank li.r2 .medal{background:var(--jade)}
+.toprank li.r3{background:#A3322A14;border-color:var(--lacquer)} .toprank li.r3 .medal{background:var(--lacquer)}
+.toprank li.none .w{color:var(--grey);font-weight:500}
+.toprank li.none .sc{color:var(--grey)}
+.toprank li.out{opacity:.45}
+.toprank li[aria-current="true"]{box-shadow:inset 0 0 0 2px var(--ink)}
+.nowtag{font-style:normal;font-size:.68rem;font-weight:700;color:#fff;background:var(--lacquer);border-radius:999px;padding:0 6px;margin-left:6px;vertical-align:2px}
+.ranklegend{display:flex;gap:10px;flex-wrap:wrap;font-size:.75rem;color:var(--muted);margin:2px 0 8px}
+.ranklegend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}
 .toggle{display:flex;gap:8px;align-items:center;font-size:.85rem;color:var(--muted);margin:0 0 6px}
 .empty{color:var(--muted);font-size:.92rem;margin:4px 0}
 .detail dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:6px 0 0;font-size:.9rem}
@@ -168,8 +179,9 @@ footer{color:var(--muted);font-size:.8rem;padding:6px 0 30px}
 
   <aside class="side">
     <div class="panel">
-      <h2>今日最吉排行</h2>
-      <label class="toggle"><input type="checkbox" id="dayOnly"> 只看日間（07:00–21:00）</label>
+      <h2>今日時辰吉方</h2>
+      <label class="toggle"><input type="checkbox" id="dayOnly"> 前三吉只從日間（07:00–21:00）挑選</label>
+      <div class="ranklegend"><span><i style="background:var(--brass)"></i>第一吉</span><span><i style="background:var(--jade)"></i>第二吉</span><span><i style="background:var(--lacquer)"></i>第三吉</span></div>
       <ol class="toprank" id="rank"></ol>
     </div>
     <div class="panel fs" id="fs"></div>
@@ -324,15 +336,24 @@ function render(){
   $('#date').value=S.date;
   const c0=S.charts[6],dow=new Date(S.date+'T12:00').getDay();
   $('#pillars').innerHTML=`${S.date}（${WKD[dow]}）　日柱 <b>${c0.dayGZ}</b>　${c0.term}${c0.yang?'陽':'陰'}遁 ${c0.ju} 局（${c0.yuan}元）`;
-  // rank
-  let all=[];S.charts.forEach((c,hb)=>c.zuiji.forEach(x=>all.push({hb,c,x})));
-  if(S.dayOnly)all=all.filter(a=>DAYH.has(a.hb));
-  all.sort((a,b)=>b.x.ss-a.x.ss||a.hb-b.hb);
-  $('#rank').innerHTML=all.length?all.slice(0,8).map((a,i)=>`<li data-hb="${a.hb}" data-p="${a.x.p}" tabindex="0"><span class="rk">${i+1}</span><span class="w">${a.c.hourGZ}時 往${a.x.dir}方 <span>${hrTxt(a.hb)}・${a.x.door}${a.x.ge.filter(g=>!['三勝宮','五不擊','天輔時'].includes(g)).slice(0,2).map(g=>'・'+g).join('')}</span></span><span class="sc">${Math.round(a.x.ss)}</span></li>`).join(''):`<li style="cursor:default;display:block" class="empty">${S.dayOnly?'日間沒有符合條件的最吉方，可取消「只看日間」查看夜間時辰。':'這一天沒有符合全部條件的最吉方。'}</li>`;
+  // 今日時辰吉方（子→亥）
+  const ns0=nowSlot();
+  const hrs=S.charts.map((c,hb)=>({hb,c,top:c.zuiji[0]||null,inScope:!S.dayOnly||DAYH.has(hb)}));
+  const ranked=hrs.filter(h=>h.top&&h.inScope).sort((a,b)=>b.top.ss-a.top.ss||a.hb-b.hb).slice(0,3);
+  const rankOf=new Map(ranked.map((h,i)=>[h.hb,i+1]));
+  const all=ranked;
+  $('#rank').innerHTML=hrs.map(h=>{const r=rankOf.get(h.hb),x=h.top||h.c.best,now=ns0.date===S.date&&ns0.hb===h.hb;
+    const others=h.c.zuiji.slice(1).map(z=>z.dir+z.door[0]).join('・');
+    const ge=h.top?h.top.ge.filter(g=>!['三勝宮','五不擊','天輔時'].includes(g)).slice(0,2).join('・'):'';
+    return `<li class="${r?'r'+r:''} ${h.top?'':'none'} ${h.inScope?'':'out'}" data-hb="${h.hb}" data-p="${x.p}" tabindex="0" aria-label="${h.c.hourGZ}時${h.top?'，最吉往'+x.dir+'方':'，無最吉方'}${r?'，今日第'+r+'吉':''}">
+      <span class="hz">${QM.ZHI[h.hb]}<small>${hrTxt(h.hb)}</small></span>
+      <span class="w">${h.top?`往${x.dir}方・${x.door}`:'無最吉方'}${now?'<em class="nowtag">現在</em>':''}<span>${h.top?(ge||'')+(others?`${ge?'・':''}另：${others}`:''):`分數最高 ${x.dir}方・${x.door}`}</span></span>
+      <span class="sc">${r?`<b class="medal">第${r}</b>`:''}${Math.round(x.ss)}</span></li>`}).join('');
   if(S.hb==null){const ns=nowSlot();S.hb=(ns.date===S.date)?ns.hb:(all[0]?all[0].hb:6)}
   renderHours();renderBoard();
 }
-function renderHours(){
+function markRank(){document.querySelectorAll('#rank li').forEach(li=>li.setAttribute('aria-current',+li.dataset.hb===S.hb))}
+function renderHours(){markRank();
   const ns=nowSlot();
   $('#hours').innerHTML=S.charts.map((c,hb)=>`<button class="hb ${c.zuiji.length?'has':''} ${ns.date===S.date&&ns.hb===hb?'now':''}" data-hb="${hb}" aria-pressed="${hb===S.hb}" aria-label="${c.hourGZ}時 ${hrTxt(hb)}${c.zuiji.length?'，有最吉方':''}"><div class="z">${QM.ZHI[hb]}</div><div class="t">${hrTxt(hb)}</div><div class="s">${Math.round(c.best.ss)}</div></button>`).join('');
 }
@@ -378,7 +399,7 @@ const pick=li=>{S.hb=+li.dataset.hb;S.p=+li.dataset.p;renderHours();renderBoard(
 $('#rank').onclick=e=>{const li=e.target.closest('li[data-hb]');if(li)pick(li)};
 $('#rank').onkeydown=e=>{if(e.key==='Enter'){const li=e.target.closest('li[data-hb]');if(li)pick(li)}};
 $('#dayOnly').checked=S.dayOnly;
-$('#dayOnly').onchange=e=>{S.dayOnly=e.target.checked;store.set('qm_dayOnly',S.dayOnly?'1':'0');const hb=S.hb,p=S.p;render();S.hb=hb;S.p=p};
+$('#dayOnly').onchange=e=>{S.dayOnly=e.target.checked;store.set('qm_dayOnly',S.dayOnly?'1':'0');render()};
 
 
 // ===== 行為風水 =====
