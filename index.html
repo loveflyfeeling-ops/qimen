@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>奇門擇吉</title>
+<meta name="theme-color" content="#1F2B3D">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="奇門擇吉">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADa0lEQVR4nO3dwW3jVhRA0ZkgfQTwNjWkllm6plm6sakliwBGFrqyQb3/SXnOKcCiH6/+p2yJ+v7X3/98g1v+OPsAuC5xkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHKQ/T3nUnz9+nfK4T+317WXzI37f+TZBTYzYVsmOODSxyOpK1sYhiw3WJbLwglQZe6yb86o4lLHTomnPbyufPNDBxfD9Efdfz9+04nj2T/Xb+EvZD3+Hi5y/p/M+t/sT/vnj1+CEJ7eV+8f9+vaijMd9OMbBLWYsjjvHJItx90c61cfyP5/LYp3Vs52J42aqFowNasgji8dAHFXG4z+ZT1rUx6Nx+HvGlT14dpZcc1g29lsx84fisKFcyvjm4s0+pOE4LBvnmp3/8Thcij6Lw2dqcuWwbFzBRf+3whdzMA57ynM5dr7GVg57ynVMnQvbCkkcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEE6eJNan3h7Ogc+6WTlIImDNHZ76xM/K/s73Pv88DE84pyv8Vrn9IuhiwQ6wrZCEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgfpq93e+ivdXfp0vm/ld+H7VpgkDpLvW5l3heMZ2fetHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdpLA6fnr2OqXNxMI6LfLaMTzp2vmwrpMk47CxXMHgWjsdhZ3kWh8/U8LZi8TjX7Pxdc5AeiuPmemXxOMvNyT+y+y9ZOfSx34qZPxqHy9Ire/DsDKwcNpfTjW8o/5nZVqoPiaxWQx5Z0Ze/WtHHOqtnOxbHnVQtIePuj3TqQnBy5bh/TBIZ8eEYB18iDN/7/PXt5f6hX+Eenc/ok8+r2akevPf5hywSm614sq26ILUw7LRo2gtfrehjj3VzXrWt/J8tZpHVT78dcbxTyYhtS/LWON6p5ID92/Q5cfAUvNmHJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIP0LH4Hj6YKyqcsAAAAASUVORK5CYII=">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADa0lEQVR4nO3dwW3jVhRA0ZkgfQTwNjWkllm6plm6sakliwBGFrqyQb3/SXnOKcCiH6/+p2yJ+v7X3/98g1v+OPsAuC5xkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHKQ/T3nUnz9+nfK4T+317WXzI37f+TZBTYzYVsmOODSxyOpK1sYhiw3WJbLwglQZe6yb86o4lLHTomnPbyufPNDBxfD9Efdfz9+04nj2T/Xb+EvZD3+Hi5y/p/M+t/sT/vnj1+CEJ7eV+8f9+vaijMd9OMbBLWYsjjvHJItx90c61cfyP5/LYp3Vs52J42aqFowNasgji8dAHFXG4z+ZT1rUx6Nx+HvGlT14dpZcc1g29lsx84fisKFcyvjm4s0+pOE4LBvnmp3/8Thcij6Lw2dqcuWwbFzBRf+3whdzMA57ynM5dr7GVg57ynVMnQvbCkkcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEE6eJNan3h7Ogc+6WTlIImDNHZ76xM/K/s73Pv88DE84pyv8Vrn9IuhiwQ6wrZCEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgfpq93e+ivdXfp0vm/ld+H7VpgkDpLvW5l3heMZ2fetHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdpLA6fnr2OqXNxMI6LfLaMTzp2vmwrpMk47CxXMHgWjsdhZ3kWh8/U8LZi8TjX7Pxdc5AeiuPmemXxOMvNyT+y+y9ZOfSx34qZPxqHy9Ire/DsDKwcNpfTjW8o/5nZVqoPiaxWQx5Z0Ze/WtHHOqtnOxbHnVQtIePuj3TqQnBy5bh/TBIZ8eEYB18iDN/7/PXt5f6hX+Eenc/ok8+r2akevPf5hywSm614sq26ILUw7LRo2gtfrehjj3VzXrWt/J8tZpHVT78dcbxTyYhtS/LWON6p5ID92/Q5cfAUvNmHJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIP0LH4Hj6YKyqcsAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E6ECE8; --sheet:#F7F9F7; --ink:#1F2B3D; --muted:#5D6A78; --line:#C9D3CE;
+  --lacquer:#A3322A; --brass:#B88A1B; --brass-soft:#F3E3B5; --jade:#2F6B5A; --grey:#8A949C;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141B24; --sheet:#1C2532; --ink:#E4E8EC; --muted:#9AA6B2; --line:#2E3A48;
+    --lacquer:#E06A5E; --brass:#E2B54A; --brass-soft:#3A3120; --jade:#5FB39A; --grey:#6B7682;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141B24; --sheet:#1C2532; --ink:#E4E8EC; --muted:#9AA6B2; --line:#2E3A48;
+  --lacquer:#E06A5E; --brass:#E2B54A; --brass-soft:#3A3120; --jade:#5FB39A; --grey:#6B7682;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.6;font-size:16px}
+.serif{font-family:"Noto Serif TC","Songti TC","PMingLiU",serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+button{font:inherit;color:inherit}
+button:focus-visible,input:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+
+header{padding:18px 0 6px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{margin:0;font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.5rem;letter-spacing:.12em}
+.datenav{display:flex;align-items:center;gap:6px}
+.datenav button{border:1px solid var(--line);background:var(--sheet);border-radius:10px;padding:6px 12px;cursor:pointer}
+.datenav input{font:inherit;color:var(--ink);background:var(--sheet);border:1px solid var(--line);border-radius:10px;padding:5px 8px}
+.pillars{margin:10px 0 0;color:var(--muted);font-size:.92rem}
+.pillars b{color:var(--ink);font-weight:700}
+
+/* the board: hero */
+.main{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:22px;margin-top:14px;align-items:start}
+@media (max-width:880px){.main{grid-template-columns:1fr}}
+.boardcard{background:var(--sheet);border:1px solid var(--line);border-radius:18px;padding:16px}
+.boardhead{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.boardhead .hr{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.6rem;letter-spacing:.06em}
+.boardhead .meta{color:var(--muted);font-size:.85rem}
+.compass{position:relative;padding:22px}
+.compass .cd{position:absolute;font-family:"Noto Serif TC",serif;font-weight:700;color:var(--muted);font-size:.85rem}
+.cd.n{bottom:0;left:50%;transform:translateX(-50%)} .cd.s{top:0;left:50%;transform:translateX(-50%)}
+.cd.e{left:0;top:50%;transform:translateY(-50%)} .cd.w{right:0;top:50%;transform:translateY(-50%)}
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--line);border:6px solid var(--line);border-radius:12px}
+.pal{background:var(--sheet);border:0;border-radius:6px;text-align:left;padding:8px 9px 9px;min-height:132px;cursor:pointer;position:relative;display:flex;flex-direction:column;gap:1px;font-size:.84rem;line-height:1.45}
+.pal .dir{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1rem;display:flex;justify-content:space-between;align-items:baseline}
+.pal .dir small{font-weight:500;color:var(--muted);font-size:.75rem}
+.pal .stem{font-family:"Noto Serif TC",serif;font-size:1.05rem}
+.pal .door{font-weight:700}
+.pal .door.good{color:var(--jade)} .pal .door.bad{color:var(--lacquer)}
+.pal .god{color:var(--muted)}
+.pal[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--ink)}
+.pal.best{background:var(--brass-soft)}
+.pal.zj::after{content:"最吉";position:absolute;right:6px;bottom:6px;background:var(--brass);color:#fff;font-size:.7rem;font-weight:700;padding:0 7px;border-radius:999px}
+.pal.center{cursor:default;align-items:center;justify-content:center;text-align:center;color:var(--muted)}
+.pal.center .stem{color:var(--ink)}
+@media (max-width:420px){.pal{min-height:118px;padding:6px;font-size:.76rem}.pal .dir{font-size:.9rem}.compass{padding:20px 18px}}
+
+/* hour strip */
+.hours{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:14px}
+.hb{border:1px solid var(--line);background:var(--sheet);border-radius:10px;padding:6px 2px 5px;cursor:pointer;text-align:center;line-height:1.25;position:relative}
+.hb .z{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.05rem}
+.hb .t{font-size:.68rem;color:var(--muted)}
+.hb .s{font-size:.72rem;font-weight:700}
+.hb[aria-pressed="true"]{background:var(--ink);color:var(--sheet);border-color:var(--ink)}
+.hb[aria-pressed="true"] .t{color:inherit;opacity:.8}
+.hb.has::before{content:"";position:absolute;top:5px;right:6px;width:7px;height:7px;border-radius:50%;background:var(--brass)}
+.hb.now{border-color:var(--lacquer);border-width:2px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.78rem;margin-top:8px}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--brass);margin-right:5px;vertical-align:1px}
+.legend em{font-style:normal;display:inline-block;width:12px;height:10px;border:2px solid var(--lacquer);border-radius:3px;margin-right:5px;vertical-align:-1px}
+
+/* side */
+.side h2{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.15rem;margin:0 0 8px;letter-spacing:.04em}
+.panel{background:var(--sheet);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:18px}
+.toprank{list-style:none;margin:0;padding:0}
+.toprank li{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.toprank li:last-child{border-bottom:0}
+.toprank .rk{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--paper);font-weight:700;font-size:.85rem}
+.toprank li:first-child .rk{background:var(--brass);color:#fff}
+.toprank .w{font-weight:700}
+.toprank .w span{font-weight:400;color:var(--muted);font-size:.85rem}
+.toprank .sc{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.15rem;color:var(--lacquer)}
+.toggle{display:flex;gap:8px;align-items:center;font-size:.85rem;color:var(--muted);margin:0 0 6px}
+.empty{color:var(--muted);font-size:.92rem;margin:4px 0}
+.detail dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:6px 0 0;font-size:.9rem}
+.detail dt{font-weight:700} .detail dd{margin:0;color:var(--muted)}
+.chk{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chk span{font-size:.76rem;padding:2px 9px;border-radius:999px;background:var(--paper)}
+.chk span.x{color:var(--lacquer);background:transparent;border:1px solid var(--lacquer)}
+.verdict{font-weight:700;margin:2px 0 0}
+.verdict.ok{color:var(--brass)}
+
+.go{background:var(--ink);color:var(--sheet);border-radius:18px;padding:16px;margin-bottom:18px}
+.go h2{color:inherit}
+.go .tgt{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.25rem;margin:0 0 4px}
+.go .sub{opacity:.8;font-size:.85rem;margin:0 0 10px}
+.go .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.go .dist button{border:1px solid rgba(255,255,255,.35);background:transparent;color:inherit;border-radius:999px;padding:3px 12px;cursor:pointer;font-size:.85rem}
+.go .dist button[aria-pressed="true"]{background:var(--brass);border-color:var(--brass);color:#fff}
+.go .btn{border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-size:.92rem}
+.go .btn.loc{background:var(--brass);color:#fff}
+.go .btn.map{background:var(--sheet);color:var(--ink)}
+.go .btn[aria-disabled="true"]{opacity:.4;pointer-events:none}
+.go .status{font-size:.82rem;opacity:.85;margin:6px 0 0;min-height:1.2em}
+.go .compassbox{display:none;align-items:center;gap:14px;margin-top:10px}
+.go .compassbox.on{display:flex}
+.go .dial{width:84px;height:84px;border-radius:50%;border:2px solid rgba(255,255,255,.35);position:relative;flex:none}
+.go .dial svg{position:absolute;inset:0;width:100%;height:100%;transition:transform .15s linear}
+.go .dial .nmark{position:absolute;top:2px;left:50%;transform:translateX(-50%);font-size:.65rem;opacity:.7}
+.go .ctext{font-size:.85rem;opacity:.9}
+footer{color:var(--muted);font-size:.8rem;padding:6px 0 30px}
+@media (prefers-reduced-motion:no-preference){.pal{transition:background .2s}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="bar">
+    <h1>奇門擇吉</h1>
+    <div class="datenav">
+      <button id="prev" aria-label="前一天">‹</button>
+      <input type="date" id="date" aria-label="選擇日期">
+      <button id="next" aria-label="後一天">›</button>
+      <button id="today">今天</button>
+    </div>
+  </div>
+  <p class="pillars" id="pillars"></p>
+</header>
+
+<main class="wrap main">
+  <section class="boardcard" aria-label="時盤">
+    <div class="boardhead"><div class="hr" id="hrTitle"></div><div class="meta" id="hrMeta"></div></div>
+    <div class="compass">
+      <span class="cd s">南</span><span class="cd n">北</span><span class="cd e">東</span><span class="cd w">西</span>
+      <div class="board" id="board"></div>
+    </div>
+    <div class="hours" id="hours" role="group" aria-label="選擇時辰"></div>
+    <div class="legend"><span><i></i>有最吉方的時辰</span><span><em></em>現在時辰</span><span>數字為吉度分數</span></div>
+  </section>
+
+  <aside class="side">
+    <div class="panel">
+      <h2>今日最吉排行</h2>
+      <label class="toggle"><input type="checkbox" id="dayOnly"> 只看日間（07:00–21:00）</label>
+      <ol class="toprank" id="rank"></ol>
+    </div>
+    <div class="go" id="go">
+      <h2>前往吉方</h2>
+      <p class="tgt" id="goTgt"></p>
+      <p class="sub" id="goSub"></p>
+      <div class="row dist" id="dist" role="group" aria-label="導航距離">
+        <span style="font-size:.85rem;opacity:.8">往該方向走</span>
+        <button data-m="300">300 公尺</button><button data-m="1000">1 公里</button><button data-m="3000">3 公里</button>
+      </div>
+      <div class="row">
+        <button class="btn loc" id="locBtn">定位目前位置</button>
+        <a class="btn map" id="gmap" target="_blank" rel="noopener" aria-disabled="true">Google 地圖</a>
+        <a class="btn map" id="amap" target="_blank" rel="noopener" aria-disabled="true">Apple 地圖</a>
+      </div>
+      <p class="status" id="locStatus">按「定位目前位置」後，會以你現在的位置為起點，規劃往吉方的路線。</p>
+      <div class="compassbox" id="compassBox">
+        <div class="dial"><span class="nmark">前</span><svg id="arrow" viewBox="0 0 84 84" aria-hidden="true"><path d="M42 10 L52 44 L42 38 L32 44 Z" fill="#E2B54A"/><circle cx="42" cy="42" r="3" fill="#fff"/></svg></div>
+        <div class="ctext" id="ctext"></div>
+      </div>
+      <div class="row"><button class="btn map" id="cmpBtn" style="font-weight:500">啟用指南針箭頭</button></div>
+    </div>
+    <div class="panel detail" id="detail"></div>
+  </aside>
+</main>
+<footer class="wrap">陽盤時家奇門，轉盤、置閏法排盤。最吉方條件：休、生、開、景門，且無門伏吟、門反吟、擊刑、白虎、空亡、門迫、門制、五不遇。內容為傳統術數參考。</footer>
+
+<script>
+const QM=(()=>{
+const GAN='甲乙丙丁戊己庚辛壬癸',ZHI='子丑寅卯辰巳午未申酉戌亥';
+const TERMS=['春分','清明','穀雨','立夏','小滿','芒種','夏至','小暑','大暑','立秋','處暑','白露','秋分','寒露','霜降','立冬','小雪','大雪','冬至','小寒','大寒','立春','雨水','驚蟄'];
+const JU={冬至:[1,7,4],小寒:[2,8,5],大寒:[3,9,6],立春:[8,5,2],雨水:[9,6,3],驚蟄:[1,7,4],春分:[3,9,6],清明:[4,1,7],穀雨:[5,2,8],立夏:[4,1,7],小滿:[5,2,8],芒種:[6,3,9],夏至:[9,3,6],小暑:[8,2,5],大暑:[7,1,4],立秋:[2,5,8],處暑:[1,4,7],白露:[9,3,6],秋分:[7,1,4],寒露:[6,9,3],霜降:[5,8,2],立冬:[6,9,3],小雪:[5,8,2],大雪:[4,7,1]};
+const YANG=new Set(TERMS.slice(18).concat(TERMS.slice(0,6)));
+const YI=['戊','己','庚','辛','壬','癸','丁','丙','乙'];
+const RING=[1,8,3,4,9,2,7,6];
+const STAR={1:'天蓬',8:'天任',3:'天沖',4:'天輔',9:'天英',2:'天芮',7:'天柱',6:'天心',5:'天禽'};
+const DOOR={1:'休門',8:'生門',3:'傷門',4:'杜門',9:'景門',2:'死門',7:'驚門',6:'開門'};
+const GOD=['值符','螣蛇','太陰','六合','白虎','玄武','九地','九天'];
+const DIR={1:'北',8:'東北',3:'東',4:'東南',9:'南',2:'西南',7:'西',6:'西北',5:'中'};
+const GUA={1:'坎',8:'艮',3:'震',4:'巽',9:'離',2:'坤',7:'兌',6:'乾'};
+const SW={"bias":14.732,"door:休":3.514,"door:生":4.181,"door:傷":-5.065,"door:杜":-6.952,"door:景":2.54,"door:死":-1.506,"door:驚":0.0,"door:開":3.288,"god:值符":4.629,"god:螣蛇":-4.102,"god:太陰":2.044,"god:六合":2.07,"god:白虎":-4.97,"god:玄武":-5.266,"god:九地":1.857,"god:九天":3.737,"t:甲":0.0,"t:乙":3.566,"t:丙":1.049,"t:丁":4.209,"t:戊":4.008,"t:己":-2.866,"t:庚":-2.039,"t:辛":-1.825,"t:壬":-2.207,"t:癸":-3.895,"d:甲":0.0,"d:乙":3.194,"d:丙":1.109,"d:丁":3.023,"d:戊":0.797,"d:己":-0.13,"d:庚":-6.459,"d:辛":1.592,"d:壬":-0.753,"d:癸":-2.373,"star:蓬":-3.0,"star:任":0.469,"star:沖":1.001,"star:輔":3.053,"star:英":-2.332,"star:芮":-0.959,"star:柱":-1.349,"star:心":3.118,"pal:1":-0.195,"pal:8":-0.698,"pal:3":0.565,"pal:4":-1.11,"pal:9":0.378,"pal:2":0.425,"pal:7":1.291,"pal:6":-0.656,"ge:三奇八門":2.551,"ge:乙奇昇殿":4.15,"ge:丁奇昇殿":-0.244,"ge:日奇得使":-0.427,"ge:月奇得使":1.498,"ge:星奇得使":2.13,"ge:日照門閭":0.235,"ge:用映當門":1.837,"ge:玉女守門":2.123,"ge:青龍纏戶":2.147,"ge:真詐":2.107,"ge:休詐":2.54,"ge:重詐":2.54,"ge:天遁":2.236,"ge:地遁":-0.226,"ge:人遁":0.955,"ge:神遁":2.312,"ge:風遁":3.471,"ge:雲遁":-1.045,"ge:龍遁":1.317,"ge:虎遁":-0.143,"ge:青龍返首":-0.899,"ge:飛鳥跌穴":-0.927,"ge:天假":1.703,"ge:神假":-2.743,"ge:相佐":3.084,"ge:懽怡":1.2,"ge:三勝宮":-2.212,"ge:五不擊":0.646,"ge:天輔時":-0.024};
+const W={"door:休":27.34,"door:生":27.77,"door:傷":-26.08,"door:杜":-13.14,"door:景":22.6,"door:死":-31.24,"door:驚":-29.9,"door:開":22.66,"god:值符":12.31,"god:螣蛇":-11.71,"god:太陰":7.9,"god:六合":12.78,"god:白虎":-16.33,"god:玄武":-18.79,"god:九地":6.97,"god:九天":6.86,"ge:三奇八門":16.12,"ge:乙奇昇殿":16.34,"ge:丁奇昇殿":5.14,"ge:日奇得使":0.0,"ge:月奇得使":0.0,"ge:星奇得使":0.0,"ge:日照門閭":0.0,"ge:用映當門":9.77,"ge:玉女守門":12.72,"ge:青龍纏戶":10.67,"ge:真詐":0.0,"ge:休詐":7.06,"ge:重詐":7.57,"ge:天遁":1.49,"ge:地遁":3.0,"ge:人遁":14.26,"ge:神遁":6.37,"ge:風遁":0.0,"ge:雲遁":3.93,"ge:龍遁":10.86,"ge:虎遁":1.54,"ge:青龍返首":6.83,"ge:飛鳥跌穴":0.0,"ge:天假":21.94,"ge:神假":5.57,"ge:相佐":4.12,"ge:懽怡":3.75,"ge:三勝宮":0.33,"ge:五不擊":1.83,"t:甲":0.0,"t:乙":13.84,"t:丙":7.96,"t:丁":23.73,"t:戊":21.51,"t:己":-8.34,"t:庚":-33.78,"t:辛":-2.53,"t:壬":-3.84,"t:癸":-18.55,"d:甲":0.0,"d:乙":14.75,"d:丙":0.54,"d:丁":13.32,"d:戊":10.84,"d:己":-7.86,"d:庚":-20.74,"d:辛":0.49,"d:壬":-5.42,"d:癸":-5.92,"star:蓬":-9.85,"star:任":-0.05,"star:沖":2.1,"star:輔":14.07,"star:英":-1.24,"star:芮":-18.15,"star:柱":-1.61,"star:心":14.72,"wang:pal":-0.17,"wang:star":-1.32,"wang:door":-0.47};
+const GEDESC={三奇八門:'求財求利，求名求貴',乙奇昇殿:'約會、升遷、交易洽談',丁奇昇殿:'娛樂交際，諸事大吉',日奇得使:'求財求貴，商賈交易',月奇得使:'求職、入宅、糾紛和解',星奇得使:'祈禱、娛樂，諸事順利',日照門閭:'宴會喜樂，家庭和樂',用映當門:'婦運顯彰，家庭和樂',玉女守門:'貴人多助',青龍纏戶:'諸事稱心，家庭和樂',真詐:'開市買賣、旅遊，諸事皆吉',休詐:'祭祀消災、和解，買賣吉',重詐:'買賣求財、遠行，百事吉',天遁:'開市求財、祭祀祈願',地遁:'營造、藏匿',人遁:'溝通談判，交易求財',神遁:'化煞驅邪，修練靜坐',風遁:'廣告宣傳，約會嫁娶',雲遁:'祭祀求雨，婚嫁娛樂',龍遁:'祭祀祈雨，旅行百事吉',虎遁:'招安、防守，求財守成',青龍返首:'利於求財、喜慶，百事大吉',飛鳥跌穴:'利於求財求名，百事大吉',天假:'求貴謀事，提升地位',神假:'祭祀祈雨，求貴安神',相佐:'求貴訪談、求財交易',懽怡:'求貴訪談、求財交易',三勝宮:'談判交涉，百戰百勝',五不擊:'利於計劃謀事，貴人相助',天輔時:'求人寬恕'};
+const ri=p=>RING.indexOf(p),DAY=86400000;
+const PEL={1:'水',8:'土',3:'木',4:'木',9:'火',2:'土',7:'金',6:'金'},SEL={蓬:'水',任:'土',沖:'木',輔:'木',英:'火',芮:'土',柱:'金',心:'金'},DEL={休:'水',生:'土',傷:'木',杜:'木',景:'火',死:'土',驚:'金',開:'金'};
+const KE={水:'火',火:'金',金:'木',木:'土',土:'水'};
+const WANGT={春:{木:2,火:1,水:0,金:-1,土:-2},夏:{火:2,土:1,木:0,水:-1,金:-2},秋:{金:2,水:1,土:0,火:-1,木:-2},冬:{水:2,木:1,金:0,土:-1,火:-2}};
+function sunLon(ms){const jd=ms/DAY+2440587.5,T=(jd-2451545)/36525,r=Math.PI/180;
+  const L0=280.46646+36000.76983*T+.0003032*T*T,M=357.52911+35999.05029*T-.0001537*T*T;
+  const Cc=(1.914602-.004817*T-.000014*T*T)*Math.sin(M*r)+(.019993-.000101*T)*Math.sin(2*M*r)+.000289*Math.sin(3*M*r);
+  const om=125.04-1934.136*T;let l=L0+Cc-.00569-.00478*Math.sin(om*r);return((l%360)+360)%360}
+const dnum=(y,m,d)=>Math.floor(Date.UTC(y,m-1,d)/DAY);
+const dIdx=n=>((n+2440588+49)%60+60)%60;
+const tw=n=>n*DAY-8*3600000;
+function termAfter(ms,k){const tgt=15*k,f=x=>{let v=sunLon(x)-tgt;return((v+540)%360)-180};let t=ms;let g=0;
+  while((f(t)>=0||f(t+DAY)<0)&&g<400){t+=DAY;g++}let a=t,b=t+DAY;for(let i=0;i<40;i++){const c=(a+b)/2;f(c)<0?a=c:b=c}return b}
+const ANCHOR=dnum(2026,10,2); // 己酉 上元符頭 = 寒露（依網站盤面校正）
+let ZR=null;
+function buildZR(){const start=ANCHOR-15*730;
+  const run=k0=>{const m=new Map();let n=start,k=k0;m.set(n,k);
+    while(n<ANCHOR+15*600){const n2=n+15;let k2=(k+1)%24;const t=termAfter(tw(n2)-15*DAY,k2),lead=Math.floor((t+8*3600000)/DAY)-n2;
+      if(lead>9&&(TERMS[k]==='芒種'||TERMS[k]==='大雪'))k2=k;m.set(n2,k2);n=n2;k=k2}return m};
+  const k0=Math.floor(sunLon(tw(start))/15);
+  for(const c of [k0,(k0+1)%24,(k0+23)%24,(k0+2)%24]){const m=run(c);if(TERMS[m.get(ANCHOR)]==='寒露')return m}
+  return run(k0)}
+function chart(y,m,d,hb){
+  if(!ZR)ZR=buildZR();
+  const n=dnum(y,m,d),di=dIdx(n),ds=di%10;
+  const hs=(ds%5*2+hb)%10;let hi=0;for(let i=0;i<60;i++)if(i%10===hs&&i%12===hb){hi=i;break}
+  const fu=(di-di%5)%12,yuan=[0,6,3,9].includes(fu)?0:[2,8,5,11].includes(fu)?1:2;
+  const k=ZR.get(n-di%15);if(k===undefined)return null;
+  const term=TERMS[k],yang=YANG.has(term),ju=JU[term][yuan];
+  const dg={};for(let i=0;i<9;i++){const p=yang?((ju-1+i)%9)+1:((ju-1-i)%9+9)%9+1;dg[p]=YI[i]}
+  const xunYi=YI[Math.floor(hi/10)],palOf=s=>+Object.keys(dg).find(p=>dg[p]===s);
+  const zf0=palOf(xunYi),src=zf0===5?2:zf0;
+  const hStem=GAN[hs]==='甲'?xunYi:GAN[hs];let tgt=palOf(hStem);if(tgt===5)tgt=2;
+  const sh=ri(tgt)-ri(src),star={},tian={},door={},god={},diP={};
+  for(const q of RING){const to=RING[(ri(q)+sh+8)%8];star[to]=STAR[q]+(q===2?'（禽）':'');tian[to]=dg[q]+(q===2?dg[5]:'');diP[q]=dg[q]+(q===2?dg[5]:'')}
+  const ki=TERMS.indexOf(term),SEA=(ki>=21||ki<=2)?'春':ki<=8?'夏':ki<=14?'秋':'冬',WS=WANGT[SEA];
+  const off=hi%10;let dp=yang?((zf0-1+off)%9)+1:((zf0-1-off)%9+9)%9+1;if(dp===5)dp=2;
+  const dsrc=zf0===5?2:zf0,dsh=ri(dp)-ri(dsrc),zhiShi=DOOR[dsrc];
+  for(const q of RING)door[RING[(ri(q)+dsh+8)%8]]=DOOR[q];
+  for(let i=0;i<8;i++){const p=RING[((ri(tgt)+(yang?i:-i))%8+8)%8];god[p]=GOD[i]}
+  const KEx={水:'火',火:'金',金:'木',木:'土',土:'水'},GELx=['木','木','火','火','土','土','金','金','水','水'];
+  const wbu=KEx[GELx[hs]]===GELx[ds]&&hs%2===ds%2;
+  const ORIGD={休:1,生:8,傷:3,杜:4,景:9,死:2,驚:7,開:6},OPPP={1:9,9:1,8:2,2:8,3:7,7:3,4:6,6:4},XING={戊:3,己:2,庚:8,辛:9,壬:4,癸:4},ZPAL={子:1,丑:8,寅:8,卯:3,辰:4,巳:4,午:9,未:2,申:2,酉:7,戌:6,亥:6};
+  const xs=(hi-hi%10)%12,kongZ=[ZHI[(xs+10)%12],ZHI[(xs+11)%12]],kongP=kongZ.map(z=>ZPAL[z]);
+  const pals=RING.map(p=>{const T=tian[p],D=diP[p],dr=door[p][0],g=god[p],zs=door[p]===zhiShi,o=[];
+    const ji='休生開'.includes(dr),qi=/[乙丙丁]/.test(T),has=(s,c)=>s.includes(c);
+    if(qi&&ji)o.push('三奇八門');
+    if(has(T,'乙')&&p===3)o.push('乙奇昇殿');
+    if(has(T,'丁')&&p===7)o.push('丁奇昇殿');
+    if(has(T,'乙')&&/[己辛]/.test(D))o.push('日奇得使');
+    if(has(T,'丙')&&/[庚戊]/.test(D))o.push('月奇得使');
+    if(has(T,'丁')&&/[壬癸]/.test(D))o.push('星奇得使');
+    if(zs&&has(D,'乙'))o.push('日照門閭');
+    if(zs&&has(D,'丙'))o.push('用映當門');
+    if(zs&&has(D,'丁'))o.push('玉女守門');
+    if(zs&&has(D,'戊'))o.push('青龍纏戶');
+    if(ji&&qi&&g==='太陰')o.push('真詐');
+    if(ji&&qi&&g==='六合')o.push('休詐');
+    if(ji&&qi&&g==='九地')o.push('重詐');
+    if(dr==='生'&&has(T,'丙')&&has(D,'丁'))o.push('天遁');
+    if(dr==='開'&&has(T,'乙')&&has(D,'己'))o.push('地遁');
+    if(dr==='休'&&has(T,'丁')&&g==='太陰')o.push('人遁');
+    if(dr==='生'&&has(T,'丙')&&g==='九天')o.push('神遁');
+    if(ji&&has(T,'乙')&&p===4)o.push('風遁');
+    if(ji&&has(T,'乙')&&has(D,'辛'))o.push('雲遁');
+    if(ji&&has(T,'乙')&&p===1)o.push('龍遁');
+    if('休生'.includes(dr)&&has(T,'乙')&&has(D,'辛')&&p===8)o.push('虎遁');
+    const ql=g==='值符'&&has(D,'丙');
+    if(ql)o.push('青龍返首');
+    if(has(T,'丙')&&(has(D,xunYi)||ql))o.push('飛鳥跌穴');
+    if(dr==='景'&&qi&&g==='九天')o.push('天假');
+    if(dr==='傷'&&has(T,'丁')&&g==='九地')o.push('神假');
+    if(g==='值符'&&/[乙丙丁]/.test(D))o.push('相佐');
+    if((qi&&has(D,xunYi))||('乙丙丁'.includes(T[0])&&ql))o.push('懽怡');
+    if(GAN[hs]==='甲')o.push('天輔時');
+    if(dr==='生'||g==='九天'||g==='值符')o.push('三勝宮');
+    if(dr==='生'||['九天','值符','九地'].includes(g)||zs)o.push('五不擊');
+    let sc=(W['door:'+dr]||0)+(W['god:'+g]||0)+(W['t:'+T[0]]||0)+(W['d:'+D[0]]||0)+W['wang:pal']*WS[PEL[p]]+W['wang:star']*WS[SEL[star[p][1]]]+W['wang:door']*WS[DEL[dr]]+(W['star:'+star[p][1]]||0);for(const x of o)sc+=W['ge:'+x]||0;
+    let ss=SW.bias+(SW['door:'+dr]||0)+(SW['god:'+g]||0)+(SW['t:'+T[0]]||0)+(SW['d:'+D[0]]||0)+(SW['star:'+star[p][1]]||0)+(SW['pal:'+p]||0);for(const x of o)ss+=SW['ge:'+x]||0;
+    const zj=!wbu&&'休生開景'.includes(dr)&&ORIGD[dr]!==p&&OPPP[ORIGD[dr]]!==p&&![...T,...D].some(x=>XING[x]===p)&&g!=='白虎'&&!kongP.includes(p)&&KE[DEL[dr]]!==PEL[p]&&KE[PEL[p]]!==DEL[dr];
+    return {p,dir:DIR[p],gua:GUA[p],door:door[p],star:star[p],god:g,t:T,d:D,ge:o,sc,ss,zj}}).sort((a,b)=>b.sc-a.sc);
+  const zuiji=pals.filter(x=>x.zj).sort((a,b)=>b.ss-a.ss);
+  return {zuiji,wbu,kong:kongZ.join(''),season:SEA,term,yang,ju,yuan:'上中下'[yuan],dayGZ:GAN[ds]+ZHI[di%12],hourGZ:GAN[hs]+ZHI[hb],xun:'甲'+ZHI[(hi-hi%10)%12]+xunYi,zhiFu:STAR[zf0],zhiShi,di:dg,tian,star,door,god,pals,best:pals[0],second:pals[1]};
+}
+return {chart,DIR,GAN,ZHI,GEDESC};
+})();
+
+const $=s=>document.querySelector(s);
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const ORDER=[4,9,2,3,5,7,8,1,6];
+const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const hrTxt=hb=>hb===0?'23–01':`${String(hb*2-1).padStart(2,'0')}–${String(hb*2+1).padStart(2,'0')}`;
+const DAYH=new Set([4,5,6,7,8,9,10]);
+function nowSlot(){const n=new Date();let d=new Date(n);let hb=Math.floor(((n.getHours()+1)%24)/2);if(n.getHours()===23)d.setDate(d.getDate()+1);return {date:iso(d),hb}}
+const S={date:null,hb:null,p:null,dayOnly:store.get('qm_dayOnly')==='1',charts:[]};
+const WKD='日一二三四五六';
+const CHECKS=[['門伏吟','門回本宮'],['門反吟','門在對宮'],['擊刑','干落刑宮'],['白虎','臨白虎'],['空亡','落空亡'],['門迫','門剋宮'],['門制','宮剋門']];
+function why(c,x){ // explain which conditions fail (for display)
+  const ORIGD={休:1,生:8,傷:3,杜:4,景:9,死:2,驚:7,開:6},OPP={1:9,9:1,8:2,2:8,3:7,7:3,4:6,6:4},XING={戊:3,己:2,庚:8,辛:9,壬:4,癸:4};
+  const PEL={1:'水',8:'土',3:'木',4:'木',9:'火',2:'土',7:'金',6:'金'},DEL={休:'水',生:'土',傷:'木',杜:'木',景:'火',死:'土',驚:'金',開:'金'},KE={水:'火',火:'金',金:'木',木:'土',土:'水'};
+  const ZP={子:1,丑:8,寅:8,卯:3,辰:4,巳:4,午:9,未:2,申:2,酉:7,戌:6,亥:6};const dr=x.door[0],p=x.p;
+  const fails={門伏吟:ORIGD[dr]===p,門反吟:OPP[ORIGD[dr]]===p,擊刑:[...x.t,...x.d].some(s=>XING[s]===p),白虎:x.god==='白虎',空亡:[...c.kong].some(z=>ZP[z]===p),門迫:KE[DEL[dr]]===PEL[p],門制:KE[PEL[p]]===DEL[dr]};
+  return fails}
+function render(){
+  const [y,m,d]=S.date.split('-').map(Number);
+  S.charts=[...Array(12).keys()].map(hb=>QM.chart(y,m,d,hb));
+  if(!S.charts[0]){$('#pillars').textContent='這個日期超出可排盤範圍（約 1996–2050 年）。';$('#board').innerHTML='';$('#hours').innerHTML='';$('#rank').innerHTML='';$('#detail').innerHTML='';return}
+  $('#date').value=S.date;
+  const c0=S.charts[6],dow=new Date(S.date+'T12:00').getDay();
+  $('#pillars').innerHTML=`${S.date}（${WKD[dow]}）　日柱 <b>${c0.dayGZ}</b>　${c0.term}${c0.yang?'陽':'陰'}遁 ${c0.ju} 局（${c0.yuan}元）`;
+  // rank
+  let all=[];S.charts.forEach((c,hb)=>c.zuiji.forEach(x=>all.push({hb,c,x})));
+  if(S.dayOnly)all=all.filter(a=>DAYH.has(a.hb));
+  all.sort((a,b)=>b.x.ss-a.x.ss||a.hb-b.hb);
+  $('#rank').innerHTML=all.length?all.slice(0,8).map((a,i)=>`<li data-hb="${a.hb}" data-p="${a.x.p}" tabindex="0"><span class="rk">${i+1}</span><span class="w">${a.c.hourGZ}時 往${a.x.dir}方 <span>${hrTxt(a.hb)}・${a.x.door}${a.x.ge.filter(g=>!['三勝宮','五不擊','天輔時'].includes(g)).slice(0,2).map(g=>'・'+g).join('')}</span></span><span class="sc">${Math.round(a.x.ss)}</span></li>`).join(''):`<li style="cursor:default;display:block" class="empty">${S.dayOnly?'日間沒有符合條件的最吉方，可取消「只看日間」查看夜間時辰。':'這一天沒有符合全部條件的最吉方。'}</li>`;
+  if(S.hb==null){const ns=nowSlot();S.hb=(ns.date===S.date)?ns.hb:(all[0]?all[0].hb:6)}
+  renderHours();renderBoard();
+}
+function renderHours(){
+  const ns=nowSlot();
+  $('#hours').innerHTML=S.charts.map((c,hb)=>`<button class="hb ${c.zuiji.length?'has':''} ${ns.date===S.date&&ns.hb===hb?'now':''}" data-hb="${hb}" aria-pressed="${hb===S.hb}" aria-label="${c.hourGZ}時 ${hrTxt(hb)}${c.zuiji.length?'，有最吉方':''}"><div class="z">${QM.ZHI[hb]}</div><div class="t">${hrTxt(hb)}</div><div class="s">${Math.round(c.best.ss)}</div></button>`).join('');
+}
+function renderBoard(){
+  const c=S.charts[S.hb],byP={};c.pals.forEach(x=>byP[x.p]=x);
+  const topZ=c.zuiji[0];
+  if(S.p==null||!byP[S.p])S.p=(topZ||c.best).p;
+  $('#hrTitle').textContent=`${c.hourGZ}時　${hrTxt(S.hb)}`;
+  $('#hrMeta').textContent=`旬首${c.xun}・空亡${c.kong}・值符${c.zhiFu}・值使${c.zhiShi}${c.wbu?'・五不遇時':''}`;
+  $('#board').innerHTML=ORDER.map(p=>{if(p===5)return `<div class="pal center"><div>中宮</div><div class="stem">${c.di[5]}</div></div>`;
+    const x=byP[p],dr=x.door;
+    return `<button class="pal ${x.zj?'zj':''} ${topZ&&topZ.p===p?'best':''}" data-p="${p}" aria-pressed="${S.p===p}" aria-label="${x.dir}方，${x.door}，${x.star}，${x.god}${x.zj?'，最吉方':''}">
+      <span class="dir">${x.dir}<small>${x.gua}</small></span>
+      <span class="stem">${x.t}／${x.d}</span>
+      <span>${x.star.replace('（禽）','禽')}</span>
+      <span class="door ${'休生開'.includes(dr[0])?'good':'死驚傷'.includes(dr[0])?'bad':''}">${dr}</span>
+      <span class="god">${x.god}</span></button>`}).join('');
+  renderDetail();
+}
+function renderDetail(){
+  const c=S.charts[S.hb],x=c.pals.find(q=>q.p===S.p),f=why(c,x),dr=x.door[0];
+  const doorOk='休生開景'.includes(dr);
+  let verdict;
+  if(x.zj)verdict=`<p class="verdict ok">${x.dir}方是最吉方，八項條件全部通過。</p>`;
+  else if(c.wbu)verdict=`<p class="verdict">此時辰為五不遇時，整個時辰不取最吉方。</p>`;
+  else if(!doorOk)verdict=`<p class="verdict">${x.door}不在休、生、開、景四門之內。</p>`;
+  else verdict=`<p class="verdict">${x.dir}方有凶格，未列入最吉。</p>`;
+  const ge=x.ge.filter(g=>g!=='天輔時'||true);
+  $('#detail').innerHTML=`<h2>${c.hourGZ}時・${x.dir}方（${x.gua}宮）</h2>${verdict}
+    <div class="chk">${CHECKS.map(([k,t])=>`<span class="${f[k]?'x':''}" title="${t}">${f[k]?'有':'無'}${k}</span>`).join('')}<span class="${c.wbu?'x':''}">${c.wbu?'是':'非'}五不遇</span></div>
+    ${ge.length?`<dl>${ge.map(g=>`<dt>${g}</dt><dd>${QM.GEDESC[g]||''}</dd>`).join('')}</dl>`:'<p class="empty" style="margin-top:10px">此宮沒有成格。</p>'}
+    <p class="empty" style="margin-top:10px">吉度 ${Math.round(x.ss)} 分・${x.star}・${x.god}・天盤${x.t}／地盤${x.d}</p>`;
+  if(typeof renderGo==='function')renderGo();
+}
+function setDate(s){S.date=s;S.hb=null;S.p=null;render()}
+function shift(n){const d=new Date(S.date+'T12:00');d.setDate(d.getDate()+n);setDate(iso(d))}
+$('#prev').onclick=()=>shift(-1);$('#next').onclick=()=>shift(1);
+$('#today').onclick=()=>{const ns=nowSlot();S.date=ns.date;S.hb=ns.hb;S.p=null;render()};
+$('#date').onchange=e=>{if(e.target.value)setDate(e.target.value)};
+$('#hours').onclick=e=>{const b=e.target.closest('.hb');if(!b)return;S.hb=+b.dataset.hb;S.p=null;renderHours();renderBoard()};
+$('#board').onclick=e=>{const b=e.target.closest('.pal[data-p]');if(!b)return;S.p=+b.dataset.p;renderBoard()};
+const pick=li=>{S.hb=+li.dataset.hb;S.p=+li.dataset.p;renderHours();renderBoard();if(window.innerWidth<880)$('.boardcard').scrollIntoView({behavior:'smooth'})};
+$('#rank').onclick=e=>{const li=e.target.closest('li[data-hb]');if(li)pick(li)};
+$('#rank').onkeydown=e=>{if(e.key==='Enter'){const li=e.target.closest('li[data-hb]');if(li)pick(li)}};
+$('#dayOnly').checked=S.dayOnly;
+$('#dayOnly').onchange=e=>{S.dayOnly=e.target.checked;store.set('qm_dayOnly',S.dayOnly?'1':'0');const hb=S.hb,p=S.p;render();S.hb=hb;S.p=p};
+
+// ===== 定位與導航 =====
+const BEAR={北:0,東北:45,東:90,東南:135,南:180,西南:225,西:270,西北:315};
+const G={pos:null,dist:+(store.get('qm_dist')||1000),heading:null};
+function destPoint(lat,lng,brg,m){const R=6371000,d=m/R,t=brg*Math.PI/180,p1=lat*Math.PI/180,l1=lng*Math.PI/180;
+  const p2=Math.asin(Math.sin(p1)*Math.cos(d)+Math.cos(p1)*Math.sin(d)*Math.cos(t));
+  const l2=l1+Math.atan2(Math.sin(t)*Math.sin(d)*Math.cos(p1),Math.cos(d)-Math.sin(p1)*Math.sin(p2));
+  return [p2*180/Math.PI,l2*180/Math.PI]}
+const fmt6=n=>n.toFixed(6);
+function curTarget(){if(!S.charts.length||!S.charts[S.hb])return null;const c=S.charts[S.hb];return {c,x:c.pals.find(q=>q.p===S.p)}}
+function renderGo(){
+  const t=curTarget();if(!t){$('#go').style.display='none';return}$('#go').style.display='';
+  const {c,x}=t;
+  $('#goTgt').textContent=`${c.hourGZ}時 往${x.dir}方（${x.door}）`;
+  $('#goSub').textContent=`${hrTxt(S.hb)}${x.zj?'・最吉方':'・非最吉方，可在盤上改選'}，方位角約 ${BEAR[x.dir]}°`;
+  document.querySelectorAll('#dist button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.m===G.dist));
+  const g=$('#gmap'),a=$('#amap');
+  if(G.pos){const [la,ln]=[G.pos.coords.latitude,G.pos.coords.longitude];const [la2,ln2]=destPoint(la,ln,BEAR[x.dir],G.dist);
+    g.href=`https://www.google.com/maps/dir/?api=1&origin=${fmt6(la)},${fmt6(ln)}&destination=${fmt6(la2)},${fmt6(ln2)}&travelmode=walking`;
+    a.href=`https://maps.apple.com/?saddr=${fmt6(la)},${fmt6(ln)}&daddr=${fmt6(la2)},${fmt6(ln2)}&dirflg=w`;
+    g.setAttribute('aria-disabled','false');a.setAttribute('aria-disabled','false');
+  }else{g.removeAttribute('href');a.removeAttribute('href');g.setAttribute('aria-disabled','true');a.setAttribute('aria-disabled','true')}
+  updateArrow();
+}
+function locate(){
+  if(!('geolocation' in navigator)){$('#locStatus').textContent='這個瀏覽器不支援定位，請改用手機瀏覽器開啟。';return}
+  $('#locStatus').textContent='定位中…';
+  navigator.geolocation.getCurrentPosition(p=>{G.pos=p;const t=new Date(p.timestamp);
+      $('#locStatus').textContent=`已定位（誤差約 ${Math.round(p.coords.accuracy)} 公尺，${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}）。點地圖按鈕開始導航。`;
+      $('#locBtn').textContent='重新定位';renderGo()},
+    e=>{G.pos=null;renderGo();
+      $('#locStatus').textContent=e.code===1?'無法取得位置：定位權限被拒絕。請在瀏覽器或手機設定中允許定位；iPhone 請到「設定 → 隱私權與安全性 → 定位服務 → Safari 網站」設為「使用 App 期間」。':e.code===3?'定位逾時，請到戶外或開啟 GPS 後再試一次。':'暫時無法取得位置，請稍後再試。'},
+    {enableHighAccuracy:true,timeout:15000,maximumAge:0});
+}
+function updateArrow(){
+  const t=curTarget();if(!t||G.heading==null)return;
+  const rel=((BEAR[t.x.dir]-G.heading)%360+360)%360;
+  $('#arrow').style.transform=`rotate(${rel}deg)`;
+  $('#ctext').textContent=rel<15||rel>345?`就是這個方向，往${t.x.dir}方前進。`:`請${rel<=180?'向右':'向左'}轉約 ${Math.round(rel<=180?rel:360-rel)}°，箭頭指向${t.x.dir}方。`;
+}
+function onOrient(e){let h=null;
+  if(typeof e.webkitCompassHeading==='number')h=e.webkitCompassHeading;
+  else if(e.absolute&&typeof e.alpha==='number')h=(360-e.alpha)%360;
+  if(h==null)return;G.heading=h;$('#compassBox').classList.add('on');updateArrow()}
+async function enableCompass(){
+  try{
+    if(typeof DeviceOrientationEvent!=='undefined'&&typeof DeviceOrientationEvent.requestPermission==='function'){
+      const r=await DeviceOrientationEvent.requestPermission();if(r!=='granted'){$('#locStatus').textContent='未允許使用指南針，可改用地圖導航。';return}}
+    window.addEventListener('deviceorientationabsolute',onOrient);window.addEventListener('deviceorientation',onOrient);
+    $('#cmpBtn').textContent='指南針已啟用';
+    setTimeout(()=>{if(G.heading==null)$('#locStatus').textContent='這台裝置或瀏覽器沒有提供指南針資料，請改用地圖導航。'},2500);
+  }catch(err){$('#locStatus').textContent='無法啟用指南針，請改用地圖導航。'}
+}
+$('#locBtn').onclick=locate;$('#cmpBtn').onclick=enableCompass;
+$('#dist').onclick=e=>{const b=e.target.closest('button[data-m]');if(!b)return;G.dist=+b.dataset.m;store.set('qm_dist',String(G.dist));renderGo()};
+try{navigator.permissions&&navigator.permissions.query({name:'geolocation'}).then(r=>{if(r.state==='granted')locate()}).catch(()=>{})}catch(e){}
+const ns=nowSlot();S.date=ns.date;S.hb=ns.hb;render();
+</script>
+</body>
+</html>
